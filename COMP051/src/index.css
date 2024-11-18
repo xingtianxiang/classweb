@@ -1,0 +1,76 @@
+body {
+    background-color: #fdf0e5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 固定 Navbar 样式 */
+.navbar {
+    background-color: #f47920;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* 固定 Sidebar 样式 */
+.sidebar {
+    position: fixed;
+    top: 60px; /* 与 Navbar 相连 */
+    left: 0;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    background-color: #343a40;
+    color: #fff;
+    width: 250px;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+/* Sidebar 标题样式 */
+.sidebar h4 {
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Sidebar 列表样式 */
+.sidebar ul {
+    list-style: none;
+    padding: 30px;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar li.active a {
+    color: #17a2b8;
+    font-weight: bold;
+}
+
+/* 主内容样式，避免与 Sidebar 重叠 */
+.main-content {
+    margin-left: 250px;
+    padding: 80px 20px 20px 20px; /* 上、右、下、左 */
+}
+
+/* 调整 Navbar 文字位置 */
+.navbar .navbar-brand,
+.navbar .nav-link {
+    line-height: 1.5;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* 隐藏 Sidebar */
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
